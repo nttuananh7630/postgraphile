@@ -1,0 +1,27 @@
+{
+  "name": "client-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-cache-inmemory": "1.2.5",
+    "apollo-client": "2.3.5",
+    "apollo-link-http": "1.5.4",
+    "graphql": "0.13.2",
+    "graphql-anywhere": "4.1.14",
+    "graphql-tag": "2.9.2",
+    "moment": "2.22.2",
+    "prop-types": "15.6.2",
+    "react": "^16.4.1",
+    "react-apollo": "2.1.6",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "4.3.1",
+    "react-scripts": "1.1.4",
+    "slug": "0.9.1"
+  },
+  "scripts": {
+    "start": "if [ -x ../.env ]; then . ../.env; fi; BROWSER=none PORT=$CLIENT_PORT react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

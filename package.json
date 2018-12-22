@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "db:reset": "psql -X1v ON_ERROR_STOP=1 graphiledemo -f ./db/schema.sql",
+    "lint": "eslint .",
+    "client:react": "cd client-react; npm start",
+    "server:koa2": "cd server-koa2; npm start",
+    "start": "concurrently --kill-others 'npm run server:koa2' 'npm run client:react'"
+  },
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "*"
+    ],
+    "nohoist": [
+      "**/react-scripts",
+      "**/react-scripts/**"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "8.2.5",
+    "concurrently": "3.6.0",
+    "eslint": "5.0.1",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-graphql": "2.1.1",
+    "eslint-plugin-prettier": "2.6.1",
+    "eslint-plugin-react": "7.10.0",
+    "eslint_d": "5.3.1",
+    "prettier": "1.13.6"
+  },
+  "engines": {
+      "node": ">=8.11.3 <10.4.0"
+  }
+}
